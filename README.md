@@ -219,7 +219,9 @@ npm run dev
 ## Backend (.env)
 
 PORT=5000
-MONGODB_URI=<Your MongoDB Atlas Connection String>
+
+MONGODB_URI=Your MongoDB Atlas Connection String
+
 CLIENT_URL=https://sales-kiosk-assignment.vercel.app
 
 ## Frontend (.env)
