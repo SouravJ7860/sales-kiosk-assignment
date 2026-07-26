@@ -25,8 +25,8 @@ https://sales-kiosk-assignment.onrender.com
 ---
 
 # 📹 Demo Video
-
-> Add Loom / Google Drive / YouTube link here
+Live Demo Video : 
+https://www.loom.com/share/75288563e0404d9f88b24496feb25c23
 
 ---
 
