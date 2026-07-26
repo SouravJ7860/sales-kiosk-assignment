@@ -126,10 +126,6 @@ function InventoryPage() {
 
       <InventorySummary inventory={inventory} />
 
-      
-
-
-
       <div className="tower-grid">
         {Object.entries(groupedInventory).map(([tower, units]) => (
           <TowerCard

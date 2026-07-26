@@ -241,68 +241,245 @@ body {
     transform: translateY(-3px);
 
 }
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(6px);
 
-.modal-overlay {
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    position: fixed;
+    z-index:999;
 
-    inset: 0;
+    animation:fadeIn .25s ease;
+}
 
-    background: rgba(0, 0, 0, .55);
+.booking-modal{
 
-    display: flex;
+    position:relative;
 
-    justify-content: center;
+    width:430px;
+    max-width:95%;
 
-    align-items: center;
+    background:white;
 
-    z-index: 999;
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    animation:popup .25s ease;
 
 }
 
-.booking-modal {
+.close-btn{
 
-    background: #fff;
+    position:absolute;
 
-    width: 400px;
+    top:15px;
+    right:15px;
 
-    padding: 25px;
+    border:none;
+    background:none;
 
-    border-radius: 10px;
+    font-size:24px;
 
-}
+    cursor:pointer;
 
-.booking-modal input {
-
-    width: 100%;
-
-    margin: 10px 0;
-
-    padding: 12px;
-
-    font-size: 16px;
-
-    box-sizing: border-box;
+    color:#888;
 
 }
 
-.modal-buttons {
+.close-btn:hover{
 
-    display: flex;
-
-    justify-content: flex-end;
-
-    gap: 10px;
-
-    margin-top: 15px;
+    color:#d32f2f;
 
 }
 
-.modal-buttons button {
+.booking-modal h2{
 
-    padding: 10px 18px;
+    color:#183153;
 
-    cursor: pointer;
+    margin-bottom:10px;
+
+}
+
+.unit-badge{
+
+    display:inline-block;
+
+    margin-bottom:25px;
+
+    padding:8px 18px;
+
+    background:#183153;
+
+    color:white;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+.booking-modal label{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    margin-top:15px;
+
+    font-weight:600;
+
+    color:#444;
+
+}
+
+.booking-modal input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #dcdcdc;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.booking-modal input:focus{
+
+    outline:none;
+
+    border-color:#183153;
+
+    box-shadow:0 0 0 3px rgba(24,49,83,.12);
+
+}
+
+.phone-hint{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#777;
+
+    font-size:12px;
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:28px;
+
+}
+
+.cancel-btn{
+
+    border:none;
+
+    background:#e5e7eb;
+
+    color:#444;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.cancel-btn:hover{
+
+    background:#d1d5db;
+
+}
+
+.book-btn{
+
+    border:none;
+
+    background:#183153;
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+.book-btn:hover{
+
+    background:#284f84;
+
+}
+
+.book-btn:disabled{
+
+    background:#8ba0c1;
+
+    cursor:not-allowed;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:translateY(20px) scale(.95);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0) scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
 
 }
 
