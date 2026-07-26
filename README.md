@@ -17,10 +17,10 @@ The application simulates a real estate showroom where sales executives can pres
 # 🚀 Live Demo
 
 Frontend:
-> Add after deployment
+https://sales-kiosk-assignment.vercel.app
 
 Backend:
-> Add after deployment
+https://sales-kiosk-assignment.onrender.com
 
 ---
 
@@ -216,15 +216,16 @@ npm run dev
 
 # 🔑 Environment Variables
 
-Backend `.env`
+## Backend (.env)
 
-```
 PORT=5000
+MONGODB_URI=<Your MongoDB Atlas Connection String>
+CLIENT_URL=https://sales-kiosk-assignment.vercel.app
 
-MONGODB_URI=your_mongodb_connection_string
-```
+## Frontend (.env)
 
----
+VITE_API_URL=https://sales-kiosk-assignment.onrender.com
+
 
 # 📡 API Endpoints
 
