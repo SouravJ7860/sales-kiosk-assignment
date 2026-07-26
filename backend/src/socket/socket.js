@@ -63,9 +63,6 @@ export const initializeSocket = (server) => {
         // Navigation Sync
         // ===============================
 
-        // socket.on("navigate", (path) => {
-        //     socket.to(ROOM_NAME).emit("navigate", path);
-        // });
         socket.on("route:change", (path) => {
             console.log("ROUTE CHANGE:", path);
 
