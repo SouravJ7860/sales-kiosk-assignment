@@ -27,7 +27,7 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 
     background: #183153;
 
@@ -241,38 +241,49 @@ body {
     transform: translateY(-3px);
 
 }
+
 .modal-overlay{
+
     position:fixed;
+
     inset:0;
-    background:rgba(0,0,0,.55);
-    backdrop-filter:blur(6px);
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    z-index:999;
+    padding:16px;
 
-    animation:fadeIn .25s ease;
+    background:rgba(0,0,0,.6);
+
+    backdrop-filter:blur(8px);
+
+    overflow:auto;
+
+    z-index:9999;
 }
 
 .booking-modal{
 
     position:relative;
 
-    width:430px;
-    max-width:95%;
+    width:min(430px,100%);
 
-    background:white;
+    background:#fff;
 
     border-radius:18px;
 
-    padding:30px;
+    padding:28px;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.25);
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
 
     animation:popup .25s ease;
 
+    max-height:calc(100vh - 32px);
+
+    overflow-y:auto;
 }
 
 .close-btn{
@@ -444,6 +455,122 @@ body {
     background:#8ba0c1;
 
     cursor:not-allowed;
+
+}
+
+@media (max-width:768px){
+
+    .modal-overlay{
+
+        align-items:flex-start;
+
+        padding:20px 15px;
+
+    }
+
+  
+    .booking-modal h2{
+
+        font-size:24px;
+
+    }
+
+    .unit-badge{
+
+        font-size:18px;
+
+        padding:8px 18px;
+
+    }
+
+    .booking-modal input{
+
+        padding:13px;
+
+        font-size:16px;
+
+    }
+
+    .modal-buttons{
+
+        flex-direction:column-reverse;
+
+    }
+
+    .modal-buttons button{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .modal-overlay{
+
+        padding:12px;
+
+    }
+
+
+    .booking-modal h2{
+
+        font-size:22px;
+
+    }
+
+    .booking-modal label{
+
+        font-size:15px;
+
+    }
+
+    .booking-modal input{
+
+        font-size:15px;
+
+        padding:12px;
+
+    }
+
+    .close-btn{
+
+        top:12px;
+        right:12px;
+
+        font-size:22px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .booking-modal{
+
+        margin-top: 10px;
+        width:100%;
+
+        max-width:420px;
+
+        padding:22px;
+
+        border-radius:16px;
+
+    }
+
+    .modal-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .modal-buttons button{
+
+        width:100%;
+
+    }
 
 }
 
