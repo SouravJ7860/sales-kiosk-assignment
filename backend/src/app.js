@@ -11,12 +11,30 @@ import bookingRoutes from "./routes/booking.routes.js";
 
 const app = express();
 
+// app.use(
+//   cors({
+//     origin: process.env.CLIENT_URL,
+//     credentials: true,
+//   })
+// );
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  "https://sales-kiosk-assignment.vercel.app",
+];
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );
+
 
 app.use(morgan("dev"));
 
